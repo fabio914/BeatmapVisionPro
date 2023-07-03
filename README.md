@@ -2,7 +2,7 @@
 
 # Beatmap AR for the Apple Vision Pro
 
-Beat Saber map (a.k.a beatmap) visualizer for the Apple Vision Pro. It's the successor of [BeatmapAR](https://github.com/fabio914/BeatmapAR) for iOS.
+Beat Saber map (a.k.a beatmap) visualizer for the Apple Vision Pro. This project is the successor of [BeatmapAR](https://github.com/fabio914/BeatmapAR) for iOS.
 
 This app is still a work in progress.
 
