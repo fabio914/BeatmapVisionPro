@@ -198,59 +198,57 @@ final class ObstacleEntity: Entity {
         child.transform.scale = .init(x: width, y: height, z: length)
         self.addChild(child)
 
-//        let frontBottomLeft = SCNVector3(-width/2.0, -height/2.0, length/2.0)
-//        let frontBottomRight = SCNVector3(width/2.0, -height/2.0, length/2.0)
-//        let frontTopLeft = SCNVector3(-width/2.0, height/2.0, length/2.0)
-//        let frontTopRight = SCNVector3(width/2.0, height/2.0, length/2.0)
-//
-//        let backBottomLeft = SCNVector3(-width/2.0, -height/2.0, -length/2.0)
-//        let backBottomRight = SCNVector3(width/2.0, -height/2.0, -length/2.0)
-//        let backTopLeft = SCNVector3(-width/2.0, height/2.0, -length/2.0)
-//        let backTopRight = SCNVector3(width/2.0, height/2.0, -length/2.0)
-//
-//        self.addChildNode(makeLine(from: frontBottomLeft, to: frontBottomRight))
-//        self.addChildNode(makeLine(from: frontBottomRight, to: frontTopRight))
-//        self.addChildNode(makeLine(from: frontTopRight, to: frontTopLeft))
-//        self.addChildNode(makeLine(from: frontTopLeft, to: frontBottomLeft))
-//
-//        self.addChildNode(makeLine(from: backBottomLeft, to: backBottomRight))
-//        self.addChildNode(makeLine(from: backBottomRight, to: backTopRight))
-//        self.addChildNode(makeLine(from: backTopRight, to: backTopLeft))
-//        self.addChildNode(makeLine(from: backTopLeft, to: backBottomLeft))
-//
-//        self.addChildNode(makeLine(from: frontBottomLeft, to: backBottomLeft))
-//        self.addChildNode(makeLine(from: frontBottomRight, to: backBottomRight))
-//        self.addChildNode(makeLine(from: frontTopRight, to: backTopRight))
-//        self.addChildNode(makeLine(from: frontTopLeft, to: backTopLeft))
+        let frontBottomLeft = SIMD3<Float>(-width/2.0, -height/2.0, length/2.0)
+        let frontBottomRight = SIMD3<Float>(width/2.0, -height/2.0, length/2.0)
+        let frontTopLeft = SIMD3<Float>(-width/2.0, height/2.0, length/2.0)
+        let frontTopRight = SIMD3<Float>(width/2.0, height/2.0, length/2.0)
+
+        let backBottomLeft = SIMD3<Float>(-width/2.0, -height/2.0, -length/2.0)
+        let backBottomRight = SIMD3<Float>(width/2.0, -height/2.0, -length/2.0)
+        let backTopLeft = SIMD3<Float>(-width/2.0, height/2.0, -length/2.0)
+        let backTopRight = SIMD3<Float>(width/2.0, height/2.0, -length/2.0)
+
+        let meshResource = MeshResource.generateBox(size: 1.0)
+        let material = UnlitMaterial(color: .white)
+        let boxEntity = ModelEntity(mesh: meshResource, materials: [material])
+
+        self.addChild(makeLine(from: frontBottomLeft, to: frontBottomRight, reference: boxEntity))
+        self.addChild(makeLine(from: frontBottomRight, to: frontTopRight, reference: boxEntity))
+        self.addChild(makeLine(from: frontTopRight, to: frontTopLeft, reference: boxEntity))
+        self.addChild(makeLine(from: frontTopLeft, to: frontBottomLeft, reference: boxEntity))
+
+        self.addChild(makeLine(from: backBottomLeft, to: backBottomRight, reference: boxEntity))
+        self.addChild(makeLine(from: backBottomRight, to: backTopRight, reference: boxEntity))
+        self.addChild(makeLine(from: backTopRight, to: backTopLeft, reference: boxEntity))
+        self.addChild(makeLine(from: backTopLeft, to: backBottomLeft, reference: boxEntity))
+
+        self.addChild(makeLine(from: frontBottomLeft, to: backBottomLeft, reference: boxEntity))
+        self.addChild(makeLine(from: frontBottomRight, to: backBottomRight, reference: boxEntity))
+        self.addChild(makeLine(from: frontTopRight, to: backTopRight, reference: boxEntity))
+        self.addChild(makeLine(from: frontTopLeft, to: backTopLeft, reference: boxEntity))
     }
 
     @MainActor required init() {
         fatalError("init() has not been implemented")
     }
 
-//    private func makeLine(from positionA: SCNVector3, to positionB: SCNVector3) -> SCNNode {
-//
-//        let radius: Float = 0.005
-//        let vector = SCNVector3(positionA.x - positionB.x, positionA.y - positionB.y, positionA.z - positionB.z)
-//        let distance = sqrt(vector.x * vector.x + vector.y * vector.y + vector.z * vector.z)
-//
-//        let midPosition = SCNVector3(
-//            (positionA.x + positionB.x)/2.0,
-//            (positionA.y + positionB.y)/2.0,
-//            (positionA.z + positionB.z)/2.0
-//        )
-//
-//        let lineGeometry = SCNCylinder()
-//        lineGeometry.radius = CGFloat(radius)
-//        lineGeometry.height = CGFloat(distance + 2.0 * radius)
-//        lineGeometry.radialSegmentCount = 5
-//
-//        lineGeometry.firstMaterial?.lightingModel = .constant
-//        lineGeometry.firstMaterial?.diffuse.contents = UIColor.white
-//
-//        let lineNode = SCNNode(geometry: lineGeometry)
-//        lineNode.position = midPosition
-//        lineNode.look(at: positionB, up: .init(0, 1, 0), localFront: lineNode.worldUp)
-//        return lineNode
-//    }
+    private func makeLine(from positionA: SIMD3<Float>, to positionB: SIMD3<Float>, reference: Entity) -> Entity {
+
+        let diameter: Float = 0.01
+        let vector = SIMD3<Float>(positionA.x - positionB.x, positionA.y - positionB.y, positionA.z - positionB.z)
+        let distance = sqrt(vector.x * vector.x + vector.y * vector.y + vector.z * vector.z)
+
+        let midPosition = SIMD3<Float>(
+            (positionA.x + positionB.x)/2.0,
+            (positionA.y + positionB.y)/2.0,
+            (positionA.z + positionB.z)/2.0
+        )
+
+        let entity = reference.clone(recursive: false)
+        entity.position = midPosition
+        entity.look(at: positionB, from: midPosition, relativeTo: nil)
+
+        entity.scale = .init(x: diameter, y: diameter, z: (diameter + distance))
+        return entity
+    }
 }
