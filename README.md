@@ -8,9 +8,9 @@ This app is still a work in progress.
 
 ## Screenshots
 
-<img src="Images/screenshot1.png" width="500" />
+<img src="Images/screenshot1.jpg" width="500" />
 
-<img src="Images/screenshot2.png" width="500" />
+<img src="Images/screenshot2.jpg" width="500" />
 
 ## Requirements
 
