@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF42869B2A463D1700F637A1 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = EF42869A2A463D1700F637A1 /* RealityKitContent */; };
+		EF42869D2A463D1700F637A1 /* BeatmapARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42869C2A463D1700F637A1 /* BeatmapARApp.swift */; };
+		EF4286A52A463D1800F637A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4286A42A463D1800F637A1 /* Assets.xcassets */; };
+		EF4286A82A463D1800F637A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4286A72A463D1800F637A1 /* Preview Assets.xcassets */; };
+		EF6020EE2A4B8116008B8F46 /* BeatmapFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020ED2A4B8116008B8F46 /* BeatmapFileManager.swift */; };
+		EF6020F12A533E5F008B8F46 /* DownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020F02A533E5F008B8F46 /* DownloadScreen.swift */; };
+		EF6020F32A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020F22A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift */; };
+		EF6020F62A535CD3008B8F46 /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020F52A535CD3008B8F46 /* SceneManager.swift */; };
+		EF6020F82A535D5A008B8F46 /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020F72A535D5A008B8F46 /* MenuScreen.swift */; };
+		EF6020FA2A535DB9008B8F46 /* SongScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020F92A535DB9008B8F46 /* SongScreen.swift */; };
+		EF6020FD2A535E54008B8F46 /* BeatmapSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020FC2A535E54008B8F46 /* BeatmapSpace.swift */; };
+		EF6857A62A465BFE0058674F /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = EF6857A52A465BFE0058674F /* ZIPFoundation */; };
+		EF6857AF2A465C350058674F /* BeatmapLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = EF6857AE2A465C350058674F /* BeatmapLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF6857B22A465C350058674F /* BeatmapLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6857AC2A465C350058674F /* BeatmapLoader.framework */; };
+		EF6857B32A465C350058674F /* BeatmapLoader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF6857AC2A465C350058674F /* BeatmapLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF6857C22A465C510058674F /* BeatmapLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6857B92A465C510058674F /* BeatmapLoader.swift */; };
+		EF6857C32A465C510058674F /* BeatmapInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6857BC2A465C510058674F /* BeatmapInfo.swift */; };
+		EF6857C42A465C510058674F /* SupportedSchemaVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6857BD2A465C510058674F /* SupportedSchemaVersion.swift */; };
+		EF6857C52A465C510058674F /* BeatmapDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6857BE2A465C510058674F /* BeatmapDifficulty.swift */; };
+		EF6857C62A465C510058674F /* BeatmapSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6857C02A465C510058674F /* BeatmapSong.swift */; };
+		EF6857C72A465C510058674F /* BeatmapPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6857C12A465C510058674F /* BeatmapPreview.swift */; };
+		EF6857CA2A465CD50058674F /* ZIPBeatmapLoaderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6857C92A465CD50058674F /* ZIPBeatmapLoaderDataSource.swift */; };
+		EF8BF9B52A4A3FE200958AF4 /* CADisplayLink+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BF9B42A4A3FE200958AF4 /* CADisplayLink+Sequence.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF6857B02A465C350058674F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF42868D2A463D1700F637A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF6857AB2A465C350058674F;
+			remoteInfo = BeatmapLoader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF6857B72A465C350058674F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EF6857B32A465C350058674F /* BeatmapLoader.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EF4286952A463D1700F637A1 /* BeatmapAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeatmapAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4286992A463D1700F637A1 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		EF42869C2A463D1700F637A1 /* BeatmapARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatmapARApp.swift; sourceTree = "<group>"; };
+		EF4286A42A463D1800F637A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF4286A72A463D1800F637A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF6020ED2A4B8116008B8F46 /* BeatmapFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatmapFileManager.swift; sourceTree = "<group>"; };
+		EF6020F02A533E5F008B8F46 /* DownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadScreen.swift; sourceTree = "<group>"; };
+		EF6020F22A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryZIPBeatmapLoaderDataSource.swift; sourceTree = "<group>"; };
+		EF6020F52A535CD3008B8F46 /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
+		EF6020F72A535D5A008B8F46 /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
+		EF6020F92A535DB9008B8F46 /* SongScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongScreen.swift; sourceTree = "<group>"; };
+		EF6020FC2A535E54008B8F46 /* BeatmapSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatmapSpace.swift; sourceTree = "<group>"; };
+		EF6857AC2A465C350058674F /* BeatmapLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BeatmapLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF6857AE2A465C350058674F /* BeatmapLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeatmapLoader.h; sourceTree = "<group>"; };
+		EF6857B92A465C510058674F /* BeatmapLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatmapLoader.swift; sourceTree = "<group>"; };
+		EF6857BC2A465C510058674F /* BeatmapInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatmapInfo.swift; sourceTree = "<group>"; };
+		EF6857BD2A465C510058674F /* SupportedSchemaVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportedSchemaVersion.swift; sourceTree = "<group>"; };
+		EF6857BE2A465C510058674F /* BeatmapDifficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatmapDifficulty.swift; sourceTree = "<group>"; };
+		EF6857C02A465C510058674F /* BeatmapSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatmapSong.swift; sourceTree = "<group>"; };
+		EF6857C12A465C510058674F /* BeatmapPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeatmapPreview.swift; sourceTree = "<group>"; };
+		EF6857C92A465CD50058674F /* ZIPBeatmapLoaderDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZIPBeatmapLoaderDataSource.swift; sourceTree = "<group>"; };
+		EF8BF9B42A4A3FE200958AF4 /* CADisplayLink+Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CADisplayLink+Sequence.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF4286922A463D1700F637A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF42869B2A463D1700F637A1 /* RealityKitContent in Frameworks */,
+				EF6857B22A465C350058674F /* BeatmapLoader.framework in Frameworks */,
+				EF6857A62A465BFE0058674F /* ZIPFoundation in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF6857A92A465C350058674F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF42868C2A463D1700F637A1 = {
+			isa = PBXGroup;
+			children = (
+				EF4286972A463D1700F637A1 /* BeatmapAR */,
+				EF4286982A463D1700F637A1 /* Packages */,
+				EF6857AD2A465C350058674F /* BeatmapLoader */,
+				EF4286962A463D1700F637A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF4286962A463D1700F637A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF4286952A463D1700F637A1 /* BeatmapAR.app */,
+				EF6857AC2A465C350058674F /* BeatmapLoader.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF4286972A463D1700F637A1 /* BeatmapAR */ = {
+			isa = PBXGroup;
+			children = (
+				EF6020FB2A535E36008B8F46 /* Spaces */,
+				EF6020F42A535CB9008B8F46 /* Managers */,
+				EF6020EF2A533E4F008B8F46 /* Screens */,
+				EF6857C82A465CBD0058674F /* LoaderDataSource */,
+				EF42869C2A463D1700F637A1 /* BeatmapARApp.swift */,
+				EF4286A42A463D1800F637A1 /* Assets.xcassets */,
+				EF4286A62A463D1800F637A1 /* Preview Content */,
+				EF8BF9B42A4A3FE200958AF4 /* CADisplayLink+Sequence.swift */,
+			);
+			path = BeatmapAR;
+			sourceTree = "<group>";
+		};
+		EF4286982A463D1700F637A1 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				EF4286992A463D1700F637A1 /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		EF4286A62A463D1800F637A1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EF4286A72A463D1800F637A1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF6020EF2A533E4F008B8F46 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EF6020F02A533E5F008B8F46 /* DownloadScreen.swift */,
+				EF6020F72A535D5A008B8F46 /* MenuScreen.swift */,
+				EF6020F92A535DB9008B8F46 /* SongScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		EF6020F42A535CB9008B8F46 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EF6020ED2A4B8116008B8F46 /* BeatmapFileManager.swift */,
+				EF6020F52A535CD3008B8F46 /* SceneManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EF6020FB2A535E36008B8F46 /* Spaces */ = {
+			isa = PBXGroup;
+			children = (
+				EF6020FC2A535E54008B8F46 /* BeatmapSpace.swift */,
+			);
+			path = Spaces;
+			sourceTree = "<group>";
+		};
+		EF6857AD2A465C350058674F /* BeatmapLoader */ = {
+			isa = PBXGroup;
+			children = (
+				EF6857B82A465C510058674F /* Loader */,
+				EF6857BA2A465C510058674F /* Model */,
+				EF6857AE2A465C350058674F /* BeatmapLoader.h */,
+			);
+			path = BeatmapLoader;
+			sourceTree = "<group>";
+		};
+		EF6857B82A465C510058674F /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				EF6857B92A465C510058674F /* BeatmapLoader.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		EF6857BA2A465C510058674F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF6857BB2A465C510058674F /* Input */,
+				EF6857BF2A465C510058674F /* Output */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF6857BB2A465C510058674F /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				EF6857BC2A465C510058674F /* BeatmapInfo.swift */,
+				EF6857BD2A465C510058674F /* SupportedSchemaVersion.swift */,
+				EF6857BE2A465C510058674F /* BeatmapDifficulty.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		EF6857BF2A465C510058674F /* Output */ = {
+			isa = PBXGroup;
+			children = (
+				EF6857C02A465C510058674F /* BeatmapSong.swift */,
+				EF6857C12A465C510058674F /* BeatmapPreview.swift */,
+			);
+			path = Output;
+			sourceTree = "<group>";
+		};
+		EF6857C82A465CBD0058674F /* LoaderDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				EF6857C92A465CD50058674F /* ZIPBeatmapLoaderDataSource.swift */,
+				EF6020F22A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift */,
+			);
+			path = LoaderDataSource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EF6857A72A465C350058674F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF6857AF2A465C350058674F /* BeatmapLoader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EF4286942A463D1700F637A1 /* BeatmapAR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF4286AB2A463D1800F637A1 /* Build configuration list for PBXNativeTarget "BeatmapAR" */;
+			buildPhases = (
+				EF4286912A463D1700F637A1 /* Sources */,
+				EF4286922A463D1700F637A1 /* Frameworks */,
+				EF4286932A463D1700F637A1 /* Resources */,
+				EF6857B72A465C350058674F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF6857B12A465C350058674F /* PBXTargetDependency */,
+			);
+			name = BeatmapAR;
+			packageProductDependencies = (
+				EF42869A2A463D1700F637A1 /* RealityKitContent */,
+				EF6857A52A465BFE0058674F /* ZIPFoundation */,
+			);
+			productName = BeatmapTest;
+			productReference = EF4286952A463D1700F637A1 /* BeatmapAR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF6857AB2A465C350058674F /* BeatmapLoader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF6857B42A465C350058674F /* Build configuration list for PBXNativeTarget "BeatmapLoader" */;
+			buildPhases = (
+				EF6857A72A465C350058674F /* Headers */,
+				EF6857A82A465C350058674F /* Sources */,
+				EF6857A92A465C350058674F /* Frameworks */,
+				EF6857AA2A465C350058674F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeatmapLoader;
+			productName = BeatmapLoader;
+			productReference = EF6857AC2A465C350058674F /* BeatmapLoader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF42868D2A463D1700F637A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					EF4286942A463D1700F637A1 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					EF6857AB2A465C350058674F = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = EF4286902A463D1700F637A1 /* Build configuration list for PBXProject "BeatmapAR" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF42868C2A463D1700F637A1;
+			packageReferences = (
+				EF6857A42A465BFE0058674F /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
+			productRefGroup = EF4286962A463D1700F637A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF4286942A463D1700F637A1 /* BeatmapAR */,
+				EF6857AB2A465C350058674F /* BeatmapLoader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF4286932A463D1700F637A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4286A52A463D1800F637A1 /* Assets.xcassets in Resources */,
+				EF4286A82A463D1800F637A1 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF6857AA2A465C350058674F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF4286912A463D1700F637A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF6020F82A535D5A008B8F46 /* MenuScreen.swift in Sources */,
+				EF6020FD2A535E54008B8F46 /* BeatmapSpace.swift in Sources */,
+				EF6020FA2A535DB9008B8F46 /* SongScreen.swift in Sources */,
+				EF6020F12A533E5F008B8F46 /* DownloadScreen.swift in Sources */,
+				EF6857CA2A465CD50058674F /* ZIPBeatmapLoaderDataSource.swift in Sources */,
+				EF42869D2A463D1700F637A1 /* BeatmapARApp.swift in Sources */,
+				EF6020F62A535CD3008B8F46 /* SceneManager.swift in Sources */,
+				EF8BF9B52A4A3FE200958AF4 /* CADisplayLink+Sequence.swift in Sources */,
+				EF6020EE2A4B8116008B8F46 /* BeatmapFileManager.swift in Sources */,
+				EF6020F32A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF6857A82A465C350058674F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF6857C62A465C510058674F /* BeatmapSong.swift in Sources */,
+				EF6857C72A465C510058674F /* BeatmapPreview.swift in Sources */,
+				EF6857C32A465C510058674F /* BeatmapInfo.swift in Sources */,
+				EF6857C22A465C510058674F /* BeatmapLoader.swift in Sources */,
+				EF6857C42A465C510058674F /* SupportedSchemaVersion.swift in Sources */,
+				EF6857C52A465C510058674F /* BeatmapDifficulty.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF6857B12A465C350058674F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF6857AB2A465C350058674F /* BeatmapLoader */;
+			targetProxy = EF6857B02A465C350058674F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EF4286A92A463D1800F637A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		EF4286AA2A463D1800F637A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		EF4286AC2A463D1800F637A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BeatmapAR/Preview Content\"";
+				DEVELOPMENT_TEAM = ZTJ55TM37B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluenose.BeatmapTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		EF4286AD2A463D1800F637A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BeatmapAR/Preview Content\"";
+				DEVELOPMENT_TEAM = ZTJ55TM37B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluenose.BeatmapTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+		EF6857B52A465C350058674F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZTJ55TM37B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluenose.BeatmapLoader;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EF6857B62A465C350058674F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZTJ55TM37B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluenose.BeatmapLoader;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF4286902A463D1700F637A1 /* Build configuration list for PBXProject "BeatmapAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4286A92A463D1800F637A1 /* Debug */,
+				EF4286AA2A463D1800F637A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF4286AB2A463D1800F637A1 /* Build configuration list for PBXNativeTarget "BeatmapAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4286AC2A463D1800F637A1 /* Debug */,
+				EF4286AD2A463D1800F637A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF6857B42A465C350058674F /* Build configuration list for PBXNativeTarget "BeatmapLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF6857B52A465C350058674F /* Debug */,
+				EF6857B62A465C350058674F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF6857A42A465BFE0058674F /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.18;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF42869A2A463D1700F637A1 /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+		EF6857A52A465BFE0058674F /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF6857A42A465BFE0058674F /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EF42868D2A463D1700F637A1 /* Project object */;
+}

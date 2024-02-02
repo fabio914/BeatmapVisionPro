@@ -5,7 +5,7 @@ import BeatmapLoader
 final class InMemoryZIPBeatmapLoaderDataSource {
 
     let data: Data
-    private lazy var archive = Archive(data: data, accessMode: .read)
+    private lazy var archive: Archive? = Archive(data: data, accessMode: .read)
 
     init(with data: Data) {
         self.data = data

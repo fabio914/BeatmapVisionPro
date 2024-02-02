@@ -14,7 +14,7 @@ This app is still a work in progress.
 
 ## Requirements
 
-- [Xcode 15.0 beta 2](https://developer.apple.com/xcode/) or newer with the visionOS SDK 1.0 installed.
+- [Xcode 15.2](https://developer.apple.com/xcode/) or newer with the visionOS SDK 1.0 installed.
 
 ## Contributors
 

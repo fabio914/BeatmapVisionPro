@@ -5,7 +5,7 @@ import BeatmapLoader
 final class ZIPBeatmapLoaderDataSource {
 
     let zipFileURL: URL
-    private lazy var archive = Archive(url: zipFileURL, accessMode: .read)
+    private lazy var archive: Archive? = Archive(url: zipFileURL, accessMode: .read)
 
     init(with zipFileURL: URL) {
         self.zipFileURL = zipFileURL

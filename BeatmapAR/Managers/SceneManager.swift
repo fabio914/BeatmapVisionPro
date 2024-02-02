@@ -61,6 +61,11 @@ final class SceneManager: ObservableObject {
         songRoot.addChild(notes)
         songRoot.addChild(walls)
 
+//        let lightComponent = ImageBasedLightComponent(source: .none)
+//        let light = Entity()
+//        light.components.set(lightComponent)
+//        songRoot.addChild(light)
+
         for noteEvent in songDifficulty.notes {
             let baseEntity: Entity
 
@@ -77,6 +82,9 @@ final class SceneManager: ObservableObject {
                 baseEntity = bomb.clone(recursive: true)
             }
 
+//            baseEntity.components.set(ImageBasedLightReceiverComponent(imageBasedLight: light))
+            baseEntity.components.set(GroundingShadowComponent(castsShadow: true))
+
             let noteEntity = NoteEntity(noteEvent: noteEvent, distancePerSecond: distancePerSecond, child: baseEntity)
             noteEntity.isEnabled = false
 
@@ -84,10 +92,13 @@ final class SceneManager: ObservableObject {
         }
 
         for obstacleEvent in songDifficulty.obstacles {
+            let childEntity = wall.clone(recursive: true)
+//            childEntity.components.set(ImageBasedLightReceiverComponent(imageBasedLight: light))
+
             let obstacle = ObstacleEntity(
                 obstacleEvent: obstacleEvent,
                 distancePerSecond: distancePerSecond,
-                child: wall.clone(recursive: true)
+                child: childEntity
             )
 
             obstacle.isEnabled = false
