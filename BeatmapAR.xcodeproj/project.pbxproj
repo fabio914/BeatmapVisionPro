@@ -11,6 +11,22 @@
 		EF42869D2A463D1700F637A1 /* BeatmapARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42869C2A463D1700F637A1 /* BeatmapARApp.swift */; };
 		EF4286A52A463D1800F637A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4286A42A463D1800F637A1 /* Assets.xcassets */; };
 		EF4286A82A463D1800F637A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4286A72A463D1800F637A1 /* Preview Assets.xcassets */; };
+		EF4DA24F2B6EF12F0037ACC0 /* ogg.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4DA2482B6EEEBE0037ACC0 /* ogg.xcframework */; };
+		EF4DA2502B6EF1320037ACC0 /* vorbis.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4DA2492B6EEEBE0037ACC0 /* vorbis.xcframework */; };
+		EF4DA2592B6F0E320037ACC0 /* OggDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = EF4DA2582B6F0E320037ACC0 /* OggDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF4DA25C2B6F0E320037ACC0 /* OggDecoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4DA2562B6F0E320037ACC0 /* OggDecoder.framework */; };
+		EF4DA25D2B6F0E320037ACC0 /* OggDecoder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF4DA2562B6F0E320037ACC0 /* OggDecoder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF4DA2732B6F0EA80037ACC0 /* ogg.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4DA2482B6EEEBE0037ACC0 /* ogg.xcframework */; };
+		EF4DA2742B6F0EAB0037ACC0 /* vorbis.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4DA2492B6EEEBE0037ACC0 /* vorbis.xcframework */; };
+		EF4DA27E2B6F0F920037ACC0 /* wavHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4DA2752B6F0F910037ACC0 /* wavHeader.cpp */; };
+		EF4DA27F2B6F0F920037ACC0 /* audioSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = EF4DA2762B6F0F910037ACC0 /* audioSettings.h */; };
+		EF4DA2802B6F0F920037ACC0 /* oggHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = EF4DA2772B6F0F910037ACC0 /* oggHelper.h */; };
+		EF4DA2812B6F0F920037ACC0 /* wavHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = EF4DA2782B6F0F910037ACC0 /* wavHeader.h */; };
+		EF4DA2822B6F0F920037ACC0 /* OGGDecoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = EF4DA2792B6F0F910037ACC0 /* OGGDecoder.mm */; };
+		EF4DA2832B6F0F920037ACC0 /* bool.h in Headers */ = {isa = PBXBuildFile; fileRef = EF4DA27A2B6F0F910037ACC0 /* bool.h */; };
+		EF4DA2842B6F0F920037ACC0 /* vorbisSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4DA27B2B6F0F910037ACC0 /* vorbisSettings.cpp */; };
+		EF4DA2852B6F0F920037ACC0 /* oggHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4DA27C2B6F0F910037ACC0 /* oggHelper.cpp */; };
+		EF4DA2862B6F0F920037ACC0 /* vorbisSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = EF4DA27D2B6F0F920037ACC0 /* vorbisSettings.h */; };
 		EF6020EE2A4B8116008B8F46 /* BeatmapFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020ED2A4B8116008B8F46 /* BeatmapFileManager.swift */; };
 		EF6020F12A533E5F008B8F46 /* DownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020F02A533E5F008B8F46 /* DownloadScreen.swift */; };
 		EF6020F32A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020F22A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift */; };
@@ -33,6 +49,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EF4DA25A2B6F0E320037ACC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF42868D2A463D1700F637A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF4DA2552B6F0E320037ACC0;
+			remoteInfo = OggDecoder;
+		};
 		EF6857B02A465C350058674F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EF42868D2A463D1700F637A1 /* Project object */;
@@ -50,6 +73,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				EF6857B32A465C350058674F /* BeatmapLoader.framework in Embed Frameworks */,
+				EF4DA25D2B6F0E320037ACC0 /* OggDecoder.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +86,19 @@
 		EF42869C2A463D1700F637A1 /* BeatmapARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatmapARApp.swift; sourceTree = "<group>"; };
 		EF4286A42A463D1800F637A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF4286A72A463D1800F637A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF4DA2482B6EEEBE0037ACC0 /* ogg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ogg.xcframework; sourceTree = "<group>"; };
+		EF4DA2492B6EEEBE0037ACC0 /* vorbis.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = vorbis.xcframework; sourceTree = "<group>"; };
+		EF4DA2562B6F0E320037ACC0 /* OggDecoder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OggDecoder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4DA2582B6F0E320037ACC0 /* OggDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OggDecoder.h; sourceTree = "<group>"; };
+		EF4DA2752B6F0F910037ACC0 /* wavHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wavHeader.cpp; sourceTree = "<group>"; };
+		EF4DA2762B6F0F910037ACC0 /* audioSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioSettings.h; sourceTree = "<group>"; };
+		EF4DA2772B6F0F910037ACC0 /* oggHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oggHelper.h; sourceTree = "<group>"; };
+		EF4DA2782B6F0F910037ACC0 /* wavHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavHeader.h; sourceTree = "<group>"; };
+		EF4DA2792B6F0F910037ACC0 /* OGGDecoder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OGGDecoder.mm; sourceTree = "<group>"; };
+		EF4DA27A2B6F0F910037ACC0 /* bool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bool.h; sourceTree = "<group>"; };
+		EF4DA27B2B6F0F910037ACC0 /* vorbisSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vorbisSettings.cpp; sourceTree = "<group>"; };
+		EF4DA27C2B6F0F910037ACC0 /* oggHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = oggHelper.cpp; sourceTree = "<group>"; };
+		EF4DA27D2B6F0F920037ACC0 /* vorbisSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vorbisSettings.h; sourceTree = "<group>"; };
 		EF6020ED2A4B8116008B8F46 /* BeatmapFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatmapFileManager.swift; sourceTree = "<group>"; };
 		EF6020F02A533E5F008B8F46 /* DownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadScreen.swift; sourceTree = "<group>"; };
 		EF6020F22A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryZIPBeatmapLoaderDataSource.swift; sourceTree = "<group>"; };
@@ -86,9 +123,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF4DA2502B6EF1320037ACC0 /* vorbis.xcframework in Frameworks */,
+				EF4DA25C2B6F0E320037ACC0 /* OggDecoder.framework in Frameworks */,
+				EF4DA24F2B6EF12F0037ACC0 /* ogg.xcframework in Frameworks */,
 				EF42869B2A463D1700F637A1 /* RealityKitContent in Frameworks */,
 				EF6857B22A465C350058674F /* BeatmapLoader.framework in Frameworks */,
 				EF6857A62A465BFE0058674F /* ZIPFoundation in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4DA2532B6F0E320037ACC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4DA2742B6F0EAB0037ACC0 /* vorbis.xcframework in Frameworks */,
+				EF4DA2732B6F0EA80037ACC0 /* ogg.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,10 +154,14 @@
 		EF42868C2A463D1700F637A1 = {
 			isa = PBXGroup;
 			children = (
+				EF4DA2482B6EEEBE0037ACC0 /* ogg.xcframework */,
+				EF4DA2492B6EEEBE0037ACC0 /* vorbis.xcframework */,
 				EF4286972A463D1700F637A1 /* BeatmapAR */,
 				EF4286982A463D1700F637A1 /* Packages */,
 				EF6857AD2A465C350058674F /* BeatmapLoader */,
+				EF4DA2572B6F0E320037ACC0 /* OggDecoder */,
 				EF4286962A463D1700F637A1 /* Products */,
+				EF62CC2B2B6EE59F00F0C26E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +170,7 @@
 			children = (
 				EF4286952A463D1700F637A1 /* BeatmapAR.app */,
 				EF6857AC2A465C350058674F /* BeatmapLoader.framework */,
+				EF4DA2562B6F0E320037ACC0 /* OggDecoder.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +206,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EF4DA2572B6F0E320037ACC0 /* OggDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				EF4DA2762B6F0F910037ACC0 /* audioSettings.h */,
+				EF4DA27A2B6F0F910037ACC0 /* bool.h */,
+				EF4DA2792B6F0F910037ACC0 /* OGGDecoder.mm */,
+				EF4DA27C2B6F0F910037ACC0 /* oggHelper.cpp */,
+				EF4DA2772B6F0F910037ACC0 /* oggHelper.h */,
+				EF4DA27B2B6F0F910037ACC0 /* vorbisSettings.cpp */,
+				EF4DA27D2B6F0F920037ACC0 /* vorbisSettings.h */,
+				EF4DA2752B6F0F910037ACC0 /* wavHeader.cpp */,
+				EF4DA2782B6F0F910037ACC0 /* wavHeader.h */,
+				EF4DA2582B6F0E320037ACC0 /* OggDecoder.h */,
+			);
+			path = OggDecoder;
+			sourceTree = "<group>";
+		};
 		EF6020EF2A533E4F008B8F46 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +248,13 @@
 				EF6020FC2A535E54008B8F46 /* BeatmapSpace.swift */,
 			);
 			path = Spaces;
+			sourceTree = "<group>";
+		};
+		EF62CC2B2B6EE59F00F0C26E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EF6857AD2A465C350058674F /* BeatmapLoader */ = {
@@ -237,6 +315,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		EF4DA2512B6F0E320037ACC0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4DA2832B6F0F920037ACC0 /* bool.h in Headers */,
+				EF4DA2812B6F0F920037ACC0 /* wavHeader.h in Headers */,
+				EF4DA27F2B6F0F920037ACC0 /* audioSettings.h in Headers */,
+				EF4DA2802B6F0F920037ACC0 /* oggHelper.h in Headers */,
+				EF4DA2862B6F0F920037ACC0 /* vorbisSettings.h in Headers */,
+				EF4DA2592B6F0E320037ACC0 /* OggDecoder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF6857A72A465C350058674F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,6 +352,7 @@
 			);
 			dependencies = (
 				EF6857B12A465C350058674F /* PBXTargetDependency */,
+				EF4DA25B2B6F0E320037ACC0 /* PBXTargetDependency */,
 			);
 			name = BeatmapAR;
 			packageProductDependencies = (
@@ -270,6 +362,24 @@
 			productName = BeatmapTest;
 			productReference = EF4286952A463D1700F637A1 /* BeatmapAR.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EF4DA2552B6F0E320037ACC0 /* OggDecoder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF4DA25E2B6F0E320037ACC0 /* Build configuration list for PBXNativeTarget "OggDecoder" */;
+			buildPhases = (
+				EF4DA2512B6F0E320037ACC0 /* Headers */,
+				EF4DA2522B6F0E320037ACC0 /* Sources */,
+				EF4DA2532B6F0E320037ACC0 /* Frameworks */,
+				EF4DA2542B6F0E320037ACC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OggDecoder;
+			productName = OggDecoder;
+			productReference = EF4DA2562B6F0E320037ACC0 /* OggDecoder.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		EF6857AB2A465C350058674F /* BeatmapLoader */ = {
 			isa = PBXNativeTarget;
@@ -302,6 +412,9 @@
 					EF4286942A463D1700F637A1 = {
 						CreatedOnToolsVersion = 15.0;
 					};
+					EF4DA2552B6F0E320037ACC0 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					EF6857AB2A465C350058674F = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -325,6 +438,7 @@
 			targets = (
 				EF4286942A463D1700F637A1 /* BeatmapAR */,
 				EF6857AB2A465C350058674F /* BeatmapLoader */,
+				EF4DA2552B6F0E320037ACC0 /* OggDecoder */,
 			);
 		};
 /* End PBXProject section */
@@ -336,6 +450,13 @@
 			files = (
 				EF4286A52A463D1800F637A1 /* Assets.xcassets in Resources */,
 				EF4286A82A463D1800F637A1 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4DA2542B6F0E320037ACC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +487,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF4DA2522B6F0E320037ACC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4DA2822B6F0F920037ACC0 /* OGGDecoder.mm in Sources */,
+				EF4DA2842B6F0F920037ACC0 /* vorbisSettings.cpp in Sources */,
+				EF4DA27E2B6F0F920037ACC0 /* wavHeader.cpp in Sources */,
+				EF4DA2852B6F0F920037ACC0 /* oggHelper.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF6857A82A465C350058674F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,6 +514,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EF4DA25B2B6F0E320037ACC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF4DA2552B6F0E320037ACC0 /* OggDecoder */;
+			targetProxy = EF4DA25A2B6F0E320037ACC0 /* PBXContainerItemProxy */;
+		};
 		EF6857B12A465C350058674F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EF6857AB2A465C350058674F /* BeatmapLoader */;
@@ -563,6 +700,72 @@
 			};
 			name = Release;
 		};
+		EF4DA25F2B6F0E320037ACC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZTJ55TM37B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluenose.OggDecoder;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EF4DA2602B6F0E320037ACC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZTJ55TM37B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluenose.OggDecoder;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		EF6857B52A465C350058674F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -648,6 +851,15 @@
 			buildConfigurations = (
 				EF4286AC2A463D1800F637A1 /* Debug */,
 				EF4286AD2A463D1800F637A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF4DA25E2B6F0E320037ACC0 /* Build configuration list for PBXNativeTarget "OggDecoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4DA25F2B6F0E320037ACC0 /* Debug */,
+				EF4DA2602B6F0E320037ACC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

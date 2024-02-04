@@ -2,6 +2,7 @@ import Foundation
 import RealityKit
 import RealityKitContent
 import BeatmapLoader
+import OggDecoder
 
 final class SceneManager: ObservableObject {
     let anchor: Entity
@@ -27,6 +28,21 @@ final class SceneManager: ObservableObject {
         guard let songDifficulty = map.standardDifficulties.first(where: { $0.difficulty == difficulty }) else {
             throw SceneManagerError.missingDifficulty
         }
+
+        // THIS IS A TEST
+        let uuidString = UUID().uuidString
+        let temporaryDestination = FileManager.default.temporaryDirectory.appendingPathComponent(uuidString)
+        try map.song.write(to: temporaryDestination)
+        let decoder = OGGDecoder()
+
+        let wavUUID = UUID().uuidString
+        let wavTemporaryDestination = FileManager.default.temporaryDirectory.appendingPathComponent(wavUUID)
+        await decoder.decode(temporaryDestination, into: wavTemporaryDestination)
+
+        print("Destination: \(wavTemporaryDestination)")
+        let wavData = try Data(contentsOf: wavTemporaryDestination)
+
+        // END OF TEST
 
         let sceneEntity = try await Entity(named: "Scene", in: realityKitContentBundle)
 

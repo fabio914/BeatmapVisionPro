@@ -24,6 +24,8 @@ This app is still a work in progress.
 
 This project depends on [weichsel/ZIPFoundation](https://github.com/weichsel/ZIPFoundation).
 
+This project uses Ogg version 1.3.4 and Vorbis 1.3.7 (compiled for the visionOS with modified scripts from [ybrid/ogg-swift](https://github.com/ybrid/ogg-swift)), and a copy of [arkasas/OggDecoder](https://github.com/arkasas/OggDecoder).
+
 Its beatmap definition is based on the [lolPants/beatmap-schemas](https://github.com/lolPants/beatmap-schemas).
 
 It also uses the [Beat Saber Cube](https://www.thingiverse.com/thing:3387776) model created by [Jordan Johnston](https://www.thingiverse.com/Godsblade/about).
