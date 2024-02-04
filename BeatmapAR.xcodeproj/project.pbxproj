@@ -27,6 +27,8 @@
 		EF4DA2842B6F0F920037ACC0 /* vorbisSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4DA27B2B6F0F910037ACC0 /* vorbisSettings.cpp */; };
 		EF4DA2852B6F0F920037ACC0 /* oggHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF4DA27C2B6F0F910037ACC0 /* oggHelper.cpp */; };
 		EF4DA2862B6F0F920037ACC0 /* vorbisSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = EF4DA27D2B6F0F920037ACC0 /* vorbisSettings.h */; };
+		EF4DA3542B6F28CC0037ACC0 /* ogg.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF4DA2482B6EEEBE0037ACC0 /* ogg.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF4DA3552B6F28D00037ACC0 /* vorbis.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF4DA2492B6EEEBE0037ACC0 /* vorbis.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF6020EE2A4B8116008B8F46 /* BeatmapFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020ED2A4B8116008B8F46 /* BeatmapFileManager.swift */; };
 		EF6020F12A533E5F008B8F46 /* DownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020F02A533E5F008B8F46 /* DownloadScreen.swift */; };
 		EF6020F32A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020F22A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift */; };
@@ -68,10 +70,12 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		EF6857B72A465C350058674F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EF4DA3552B6F28D00037ACC0 /* vorbis.xcframework in Embed Frameworks */,
+				EF4DA3542B6F28CC0037ACC0 /* ogg.xcframework in Embed Frameworks */,
 				EF6857B32A465C350058674F /* BeatmapLoader.framework in Embed Frameworks */,
 				EF4DA25D2B6F0E320037ACC0 /* OggDecoder.framework in Embed Frameworks */,
 			);
