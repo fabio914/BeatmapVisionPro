@@ -16,8 +16,9 @@ struct BeatmapSpace: View {
                 Task {
                     var elapsedTime = 0.0
                     for await event in CADisplayLink.events() {
-                        elapsedTime += (event.targetTimestamp - event.timestamp)
-                        sceneManager.update(elapsedTime: elapsedTime)
+                        let deltaTime = (event.targetTimestamp - event.timestamp)
+                        elapsedTime += deltaTime
+                        sceneManager.update(elapsedTime: elapsedTime, deltaTime: deltaTime)
                     }
                 }
             }
