@@ -146,6 +146,7 @@ final class SceneManager: ObservableObject {
 
     @MainActor
     func update(elapsedTime: TimeInterval, deltaTime: TimeInterval) {
+        // FIXME: Audio sync!!!
         player.play(atTime: player.deviceCurrentTime + deltaTime)
 
         songRoot.position.z = Float(elapsedTime * distancePerSecond) + rootOriginPosition.z
