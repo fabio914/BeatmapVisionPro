@@ -1,4 +1,5 @@
 import Foundation
+import AVFoundation
 import RealityKit
 import RealityKitContent
 import BeatmapLoader
@@ -18,8 +19,13 @@ final class SceneManager: ObservableObject {
         case missingEntity
     }
 
+    private let player: AVAudioPlayer
+
     @MainActor
-    init(url: URL, difficulty: BeatmapDifficulty) async throws {
+    init(
+        url: URL,
+        difficulty: BeatmapDifficulty
+    ) async throws {
         let dataSource = ZIPBeatmapLoaderDataSource(with: url)
         let loader = BeatmapLoader(dataSource: dataSource)
         let map = try loader.loadMap()
@@ -27,6 +33,9 @@ final class SceneManager: ObservableObject {
         guard let songDifficulty = map.standardDifficulties.first(where: { $0.difficulty == difficulty }) else {
             throw SceneManagerError.missingDifficulty
         }
+
+        self.player = try await AudioManager.load(oggSong: map.song)
+        player.play()
 
         let sceneEntity = try await Entity(named: "Scene", in: realityKitContentBundle)
 
@@ -115,9 +124,11 @@ final class SceneManager: ObservableObject {
 
     @MainActor
     func update(elapsedTime: TimeInterval) {
-        songRoot.position.z = Float(elapsedTime * distancePerSecond) + rootOriginPosition.z
+        let currentTime = player.currentTime // elapsedTime
 
-        let visibleRange = (elapsedTime - visibleSeconds) ... (elapsedTime + visibleSeconds)
+        songRoot.position.z = Float(currentTime * distancePerSecond) + rootOriginPosition.z
+
+        let visibleRange = (currentTime - visibleSeconds) ... (currentTime + visibleSeconds)
 
         notes.children
             .compactMap({ $0 as? NoteEntity })
