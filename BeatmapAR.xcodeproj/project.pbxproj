@@ -265,6 +265,7 @@
 		EF4DA3D52B7197970037ACC0 /* window.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = window.c; sourceTree = "<group>"; };
 		EF4DA3D62B7197970037ACC0 /* codec_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codec_internal.h; sourceTree = "<group>"; };
 		EF4DA3D72B7197970037ACC0 /* codebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codebook.h; sourceTree = "<group>"; };
+		EF4DA4202B71994E0037ACC0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EF6020ED2A4B8116008B8F46 /* BeatmapFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatmapFileManager.swift; sourceTree = "<group>"; };
 		EF6020F02A533E5F008B8F46 /* DownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadScreen.swift; sourceTree = "<group>"; };
 		EF6020F22A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryZIPBeatmapLoaderDataSource.swift; sourceTree = "<group>"; };
@@ -335,6 +336,7 @@
 		EF42868C2A463D1700F637A1 = {
 			isa = PBXGroup;
 			children = (
+				EF4DA4202B71994E0037ACC0 /* README.md */,
 				EF4286972A463D1700F637A1 /* BeatmapAR */,
 				EF4286982A463D1700F637A1 /* Packages */,
 				EF6857AD2A465C350058674F /* BeatmapLoader */,
