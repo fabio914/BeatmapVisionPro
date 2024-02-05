@@ -1,10 +1,8 @@
 import Foundation
+import AVFoundation
 import RealityKit
 import RealityKitContent
 import BeatmapLoader
-
-import AVFoundation
-import OggDecoder
 
 final class SceneManager: ObservableObject {
     let anchor: Entity
@@ -24,7 +22,10 @@ final class SceneManager: ObservableObject {
     private let player: AVAudioPlayer
 
     @MainActor
-    init(url: URL, difficulty: BeatmapDifficulty) async throws {
+    init(
+        url: URL,
+        difficulty: BeatmapDifficulty
+    ) async throws {
         let dataSource = ZIPBeatmapLoaderDataSource(with: url)
         let loader = BeatmapLoader(dataSource: dataSource)
         let map = try loader.loadMap()
@@ -33,31 +34,8 @@ final class SceneManager: ObservableObject {
             throw SceneManagerError.missingDifficulty
         }
 
-        // THIS IS A TEST
-        let manager = FileManager.default
-        let temporaryDirectory = manager.temporaryDirectory
-        if let temporaryContents = try? manager.contentsOfDirectory(at: temporaryDirectory, includingPropertiesForKeys: nil) {
-            for itemUrl in temporaryContents {
-                try? manager.removeItem(at: itemUrl)
-            }
-        }
-
-        let uuidString = UUID().uuidString
-        let temporaryDestination = temporaryDirectory.appendingPathComponent(uuidString)
-        try map.song.write(to: temporaryDestination)
-        let decoder = OGGDecoder()
-
-        let wavUUID = UUID().uuidString
-        let wavTemporaryDestination = temporaryDirectory.appendingPathComponent(wavUUID)
-        await decoder.decode(temporaryDestination, into: wavTemporaryDestination)
-
-        print("Destination: \(wavTemporaryDestination)")
-//        let wavData = try Data(contentsOf: wavTemporaryDestination)
-
-        self.player = try AVAudioPlayer(contentsOf: wavTemporaryDestination, fileTypeHint: AVFileType.wav.rawValue)
-        player.prepareToPlay()
-
-        // END OF TEST
+        self.player = try await AudioManager.load(oggSong: map.song)
+        player.play()
 
         let sceneEntity = try await Entity(named: "Scene", in: realityKitContentBundle)
 
@@ -145,13 +123,12 @@ final class SceneManager: ObservableObject {
     }
 
     @MainActor
-    func update(elapsedTime: TimeInterval, deltaTime: TimeInterval) {
-        // FIXME: Audio sync!!!
-        player.play(atTime: player.deviceCurrentTime + deltaTime)
+    func update(elapsedTime: TimeInterval) {
+        let currentTime = player.currentTime // elapsedTime
 
-        songRoot.position.z = Float(elapsedTime * distancePerSecond) + rootOriginPosition.z
+        songRoot.position.z = Float(currentTime * distancePerSecond) + rootOriginPosition.z
 
-        let visibleRange = (elapsedTime - visibleSeconds) ... (elapsedTime + visibleSeconds)
+        let visibleRange = (currentTime - visibleSeconds) ... (currentTime + visibleSeconds)
 
         notes.children
             .compactMap({ $0 as? NoteEntity })

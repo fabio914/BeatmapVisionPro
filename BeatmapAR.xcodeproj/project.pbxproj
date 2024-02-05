@@ -102,6 +102,7 @@
 		EF4DA41D2B7197970037ACC0 /* codebook.h in Headers */ = {isa = PBXBuildFile; fileRef = EF4DA3D72B7197970037ACC0 /* codebook.h */; };
 		EF4DA41E2B7198430037ACC0 /* ogg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4DA35B2B71912E0037ACC0 /* ogg.framework */; };
 		EF4DA41F2B7198430037ACC0 /* vorbis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4DA36B2B7191380037ACC0 /* vorbis.framework */; };
+		EF4DA4222B719A710037ACC0 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4DA4212B719A710037ACC0 /* AudioManager.swift */; };
 		EF6020EE2A4B8116008B8F46 /* BeatmapFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020ED2A4B8116008B8F46 /* BeatmapFileManager.swift */; };
 		EF6020F12A533E5F008B8F46 /* DownloadScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020F02A533E5F008B8F46 /* DownloadScreen.swift */; };
 		EF6020F32A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6020F22A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift */; };
@@ -266,6 +267,7 @@
 		EF4DA3D62B7197970037ACC0 /* codec_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codec_internal.h; sourceTree = "<group>"; };
 		EF4DA3D72B7197970037ACC0 /* codebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codebook.h; sourceTree = "<group>"; };
 		EF4DA4202B71994E0037ACC0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EF4DA4212B719A710037ACC0 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		EF6020ED2A4B8116008B8F46 /* BeatmapFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatmapFileManager.swift; sourceTree = "<group>"; };
 		EF6020F02A533E5F008B8F46 /* DownloadScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadScreen.swift; sourceTree = "<group>"; };
 		EF6020F22A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryZIPBeatmapLoaderDataSource.swift; sourceTree = "<group>"; };
@@ -584,6 +586,7 @@
 			children = (
 				EF6020ED2A4B8116008B8F46 /* BeatmapFileManager.swift */,
 				EF6020F52A535CD3008B8F46 /* SceneManager.swift */,
+				EF4DA4212B719A710037ACC0 /* AudioManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -951,6 +954,7 @@
 				EF6020F62A535CD3008B8F46 /* SceneManager.swift in Sources */,
 				EF8BF9B52A4A3FE200958AF4 /* CADisplayLink+Sequence.swift in Sources */,
 				EF6020EE2A4B8116008B8F46 /* BeatmapFileManager.swift in Sources */,
+				EF4DA4222B719A710037ACC0 /* AudioManager.swift in Sources */,
 				EF6020F32A53536D008B8F46 /* InMemoryZIPBeatmapLoaderDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

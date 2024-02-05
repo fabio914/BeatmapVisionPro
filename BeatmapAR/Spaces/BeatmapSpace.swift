@@ -13,12 +13,11 @@ struct BeatmapSpace: View {
             if let sceneManager = try? await SceneManager(url: selection.url, difficulty: selection.difficulty) {
                 content.add(sceneManager.anchor)
 
+                let initialTime = CACurrentMediaTime()
                 Task {
-                    var elapsedTime = 0.0
                     for await event in CADisplayLink.events() {
-                        let deltaTime = (event.targetTimestamp - event.timestamp)
-                        elapsedTime += deltaTime
-                        sceneManager.update(elapsedTime: elapsedTime, deltaTime: deltaTime)
+                        let elapsedTime = CACurrentMediaTime() - initialTime
+                        sceneManager.update(elapsedTime: elapsedTime)
                     }
                 }
             }
